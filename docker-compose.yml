@@ -42,9 +42,9 @@ services:
       timeout: 10s
       retries: 5
 
-  boilerplate-api-api:
+  projects-api-api:
     build: .
-    container_name: boilerplate-api-api
+    container_name: projects-api-api
     restart: always
     environment:
       POSTGRES_URL: postgresql://user:password@postgres:5432/mydatabase

@@ -1,2 +1,2 @@
-# boilerplate-api
-A boilerplate-api for creating new Rust projects for this organization
+# projects-api
+A projects-api for creating new Rust projects for this organization
