@@ -1,0 +1,19 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4.2.2
+    - name: Fetch
+      run: cargo fetch --locked --verbose
+    - name: Build
+      run: cargo build --verbose
+    - name: Test
+      run: cargo test --verbose

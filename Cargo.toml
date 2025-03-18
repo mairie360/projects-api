@@ -1,0 +1,15 @@
+[package]
+name = "projects-api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.9.0"
+bcrypt = "0.17.0"
+chrono = { version  = "0.4.40", features = ["serde"] }
+diesel = { version = "2.2.8", features = ["postgres", "r2d2", "chrono"] }
+diesel_migrations = "2.2.0"
+env_logger = "0.11.7"
+r2d2 = "0.8.10"
+r2d2_redis = "0.14.0"
+serde = { version =  "1.0.219", features = ["derive"] }
