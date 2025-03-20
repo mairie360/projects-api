@@ -9,7 +9,7 @@ WORKDIR /usr/src/projects-api
 
 # Install dependencies for building
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    binutils libpq-dev curl \
+    binutils libpq-dev curl pkg-config libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the source code
@@ -27,7 +27,7 @@ FROM debian:bookworm-slim AS runtime
 
 # Install runtime dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates wget libpq5 curl \
+    ca-certificates wget libpq5 curl libssl3 \
     && rm -rf /var/lib/apt/lists/*
 
 # Create non-root user and group
